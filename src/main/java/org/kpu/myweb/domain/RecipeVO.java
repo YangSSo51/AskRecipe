@@ -4,6 +4,7 @@ public class RecipeVO {
 	private String id;
 	private String title;
 	private String url;
+	private String filename;
 	private String ingredients;
 	private String recipe;
 	public String getId() {
@@ -39,5 +40,11 @@ public class RecipeVO {
 	@Override
 	public String toString() {
 		return "RecipeVO [id=" + id + ", title" + title + ", url="+url+", ingredients=" + ingredients +", recipe="+recipe+  "]";
+	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
 }

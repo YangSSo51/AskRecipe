@@ -1,5 +1,6 @@
 package org.kpu.myweb.controller;
 
+import java.io.File;
 import java.util.List;
 
 import org.kpu.myweb.domain.RecipeVO;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 
 @Controller
@@ -33,7 +36,17 @@ public class PostController {
 	}
 	
 	@RequestMapping(value = {"/postRecipe"}, method = RequestMethod.POST)
-	public String signupMemberPost( @ModelAttribute("recipe") RecipeVO vo) throws Exception {
+	public String signupMemberPost(MultipartHttpServletRequest mtf,@ModelAttribute("recipe") RecipeVO vo) throws Exception {
+		String fileTag = "file";
+		String filePath = "C:\\temp\\";
+		MultipartFile file = mtf.getFile(fileTag);
+		String fileName = file.getOriginalFilename();
+		vo.setFilename(fileName);
+		try{
+			file.transferTo(new File(filePath+fileName));
+		}catch(Exception e) {
+			System.out.println("업로드 오류");
+		}
 		recipeService.addRecipe(vo);
 		logger.info(vo.toString());
 		logger.info(" /register URL GET method called. then forward post.jsp.");
@@ -43,7 +56,9 @@ public class PostController {
 	
 	
 	@RequestMapping(value = {"/list"}, method = RequestMethod.GET)
-	public String recipeListGet() throws Exception {
+	public String recipeListGet(@ModelAttribute("recipe") RecipeVO vo,Model model) throws Exception {
+		List<RecipeVO> recipe=recipeService.readRecipeList();
+		model.addAttribute("recipe",recipe);
 		logger.info(" /register URL GET method called. then forward list.jsp.");
 		return "list";
 	}

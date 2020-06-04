@@ -35,13 +35,14 @@
         </div>
         <div class="row mb-5">
           <div class="col-lg-12">
-            <form class="p-4 p-md-5 border rounded" name=form1 action="http://localhost:8080/myweb/post/postRecipe/" method="post">
+            <form class="p-4 p-md-5 border rounded" name=form1 action="http://localhost:8080/myweb/post/postRecipe/" method="post" enctype="multipart/form-data">
               <h3 class="text-black mb-5 border-bottom pb-2">Job Details</h3>
               <div class="form-group">
                 <label for="company-website-tw d-block">Upload Featured Image</label> <br>
                 <label class="btn btn-primary btn-md btn-file">
                   Browse File<input type="file" hidden>
                 </label>
+                <input type="file" name="file"/>
               </div>
 
               <div class="form-group">

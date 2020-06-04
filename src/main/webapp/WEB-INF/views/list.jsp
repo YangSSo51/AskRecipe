@@ -57,7 +57,11 @@
             <h2 class="section-title mb-2">43,167 Job Listed</h2>
           </div>
         </div>
-        
+        <c:forEach items="${recipe}" var="recipeVO">
+            <c:out value="${recipeVO.title}"/>
+    	    <c:out value="${recipeVO.ingredients}"/>
+    	    <c:out value="${recipeVO.recipe}"/>	
+        </c:forEach>		
         <ul class="job-listings mb-5">
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
             <a href="job-single.html"></a>
