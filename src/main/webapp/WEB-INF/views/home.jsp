@@ -1,39 +1,54 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE HTML>
-<!--
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>Full Motion</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="<c:url value="/resources/main.css" />" rel="stylesheet">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link rel="stylesheet" href="<c:url value="/resources/main.css"/>">    
 
+<%@ include file="navbar.jsp"%>
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
 
-	</head>
-	<body id="top">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
+            </div>
+            <form method="post" class="search-jobs-form">
+              <div class="row mb-5">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <input type="text" class="form-control form-control-lg" placeholder="Job title, Company...">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <input type="text" class="form-control form-control-lg" placeholder="Job title, Company...">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <input type="text" class="form-control form-control-lg" placeholder="Job title, Company...">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span class="icon-search icon mr-2"></span>Search Job</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 popular-keywords">
+                  <h3>Trending Keywords:</h3>
+                  <ul class="keywords list-unstyled m-0 p-0">
+                    <li><a href="#" class="">UI Designer</a></li>
+                    <li><a href="#" class="">Python</a></li>
+                    <li><a href="#" class="">Developer</a></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-			<!-- Banner -->
-			<!--
-				To use a video as your background, set data-video to the name of your video without
-				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-				formats to work correctly.
-			-->
-				<section id="banner" data-video="images/banner">
-					<div class="inner">
-						<header>
-							<h1>Full Motion</h1>
-							<p>A responsive video gallery template with a functional lightbox<br />
-							designed by <a href="https://templated.co/">Templated</a> and released under the Creative Commons License.</p>
-						</header>
-						<a href="#main" class="more">Learn More</a>
-					</div>
-				</section>
+      <a href="#next" class="scroll-button smoothscroll">
+        <span class=" icon-keyboard_arrow_down"></span>
+      </a>
 
-			<!-- Main -->
+    </section>
+    			<!-- Main -->
 				<div id="main">
 					<div class="inner">
 
@@ -99,29 +114,27 @@
 
 					</div>
 				</div>
+ <%@ include file="footer.jsp"%>
+ 
 
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<h2>Etiam veroeros lorem</h2>
-						<p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
+    <!-- SCRIPTS -->
+    <script src="<c:url value="/resources/js/jquery.min.js" />"></script>
+    <script src="<c:url value="/resources/js/bootstrap.bundle.min.js" />"></script>
+    <script src="<c:url value="/resources/js/isotope.pkgd.min.js" />"></script>
+    <script src="<c:url value="/resources/js/stickyfill.min.js" />"></script>
+    <script src="<c:url value="/resources/js/jquery.fancybox.min.js" />"></script>
+    <script src="<c:url value="/resources/js/jquery.easing.1.3.js" />"></script>
+    
+    <script src="<c:url value="/resources/js/jquery.waypoints.min.js" />"></script>
+    <script src="<c:url value="/resources/js/jquery.animateNumber.min.js" />"></script>
+    <script src="<c:url value="/resources/js/owl.carousel.min.js" />"></script>
+    
+    <script src="<c:url value="/resources/js/bootstrap-select.min.js" />"></script>
+    <script src="<c:url value="/resources/js/owl.carousel.min.js" />"></script>
+    
+    <script src="<c:url value="/resources/js/bootstrap-select.min.js" />"></script>
+    <script src="<c:url value="/resources/js/custom.js" />"></script>
 
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
-					</div>
-				</footer>
-
-		<!-- Scripts -->
-		<script src="<c:url value="/resources/assets/js/jquery.min.js" />"></script>
-		<script src="<c:url value="/resources/assets/js/jquery.scrolly.min.js" />"></script>
-		<script src="<c:url value="/resources/assets/js/jquery.poptrox.min.js" />"></script>
-		<script src="<c:url value="/resources/assets/js/skel.min.js" />"></script>
-		<script src="<c:url value="/resources/assets/js/util.js" />"></script>
-		<script src="<c:url value="/resources/assets/js/main.js" />"></script>
-	</body>
+  
+  </body>
 </html>

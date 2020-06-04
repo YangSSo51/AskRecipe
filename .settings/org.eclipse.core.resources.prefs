@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//src/main/java/org/kpu/myweb/controller/MemberController.java=UTF-8
+encoding//src/main/java/org/kpu/myweb/controller/PostController.java=UTF-8
+encoding//src/main/webapp/WEB-INF/views/login.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/post.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/signup.jsp=UTF-8
