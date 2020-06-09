@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="navbar.jsp"%>
 
 <script type="text/javascript">
@@ -22,7 +23,7 @@
 </script>
 
 <body>
-     <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+     <section class="section-hero overlay inner-page bg-image" style="background-image: url('http://localhost:8080/myweb/post/getImage?name=home.jpg');" id="home-section">
       <div class="container">
         <div class="row">
           <div class="col-md-7">

@@ -732,8 +732,6 @@ h3{
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease; }
-      .job-listings .job-listing a:hover {
-        border-left: 7px solid #89ba16; }
     .job-listings .job-listing .job-listing-logo {
       -webkit-box-flex: 0;
       -ms-flex: 0 0 150px;

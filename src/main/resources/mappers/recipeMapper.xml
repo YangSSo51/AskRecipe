@@ -11,8 +11,8 @@
  	</select>
  	
      <insert id="insert"> 
-   		insert into tk_recipe (id,title,filename,url,ingredients,recipe) values
- 		(#{id}, #{title},#{filename},#{url},#{ingredients}, #{recipe})
+   		insert into tk_recipe (id,title,filename,url,count,ingredients,recipe) values
+ 		(#{id}, #{title},#{filename},#{url},#{count},#{ingredients}, #{recipe})
      </insert> 
 
  	 
@@ -34,7 +34,7 @@
      </select>
  	
      <update id="update">
-	 	update tk_recipe set title =#{title}, url =#{url},filename=#{filename}, ingredients = #{ingredients}, recipe = #{recipe} 
+	 	update tk_recipe set title =#{title}, url=#{url},count=#{count},filename=#{filename}, ingredients = #{ingredients}, recipe = #{recipe} 
 		 where title = #{title}
     </update>
  

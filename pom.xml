@@ -167,7 +167,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/m
 			<artifactId>junit</artifactId>
 			<version>4.13</version>
 			<scope>test</scope>
-		</dependency>      
+		</dependency> 
 		<!-- Apache Commons FileUpload -->
 		<dependency>
 		    <groupId>commons-fileupload</groupId>

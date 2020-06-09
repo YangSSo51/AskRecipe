@@ -5,6 +5,7 @@ public class RecipeVO {
 	private String title;
 	private String url;
 	private String filename;
+	private int count;
 	private String ingredients;
 	private String recipe;
 	public String getId() {
@@ -46,5 +47,11 @@ public class RecipeVO {
 	}
 	public void setFilename(String filename) {
 		this.filename = filename;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
 	}
 }

@@ -3,17 +3,6 @@
 <link rel="stylesheet" href="<c:url value="/resources/css/style.css"/>">    
 
 <body>
-<% 	String msg=null;
-	if(id == null){
-		msg = "로그인이 필요합니다.";
-		%>
-		<script> // alert 메세지
-		alert("<%=msg%>");
-		document.location.href="/myweb/member/login";
-		</script>
-	<%
-	}
-	%>
     <!-- HOME -->
     <section class="section-hero overlay inner-page bg-image" style="background-image: url('http://localhost:8080/myweb/post/getImage?name=home.jpg');" id="home-section">
       <div class="container">
@@ -47,19 +36,19 @@
         </div>
         <div class="row mb-5">
           <div class="col-lg-12">
-            <form class="p-4 p-md-5 border rounded" name=form1 action="http://localhost:8080/myweb/post/postRecipe/" method="post" enctype="multipart/form-data">
+            <form class="p-4 p-md-5 border rounded" name=form1 action="http://localhost:8080/myweb/post/update/" method="post" enctype="multipart/form-data">
               <h3 class="text-black mb-5 border-bottom pb-2">Job Details</h3>
               <div class="form-group">
                 <label for="company-website-tw d-block">Upload Featured Image</label> <br>
                 <label class="btn btn-primary btn-md btn-file">
-                  Browse File<input type="file" hidden>
+                  Browse File<input type="file" name="file"/>
+                  <input type="text" name="filename" value="${recipe.filename}" hidden/>
                 </label>
-                <input type="file" name="file"/>
               </div>
 
               <div class="form-group">
                 <label for="job-title">Recipe Title</label>
-                <input name="title" type="text" class="form-control" id="recipe-title" placeholder="Title">
+                <input name="title" type="text" class="form-control" id="recipe-title" value="${recipe.title}">
               </div>
               <div class="form-group">
                 <label for="job-title">ID</label>
@@ -67,25 +56,19 @@
               </div>
               <div class="form-group">
                 <label for="job-title">Url</label>
-                <input name="url" type="text" class="form-control" id="recipe-title" placeholder="url">
+                <input name="url" type="text" class="form-control" id="recipe-title" value="${recipe.url}">
               </div>
               <div class="form-group">
                 <label for="job-description">Ingredients</label>
-               <input name="ingredients" type="text" class="form-control" id="recipe-title" placeholder="ingredients">
+               <input name="ingredients" type="text" class="form-control" id="recipe-title" value="${recipe.ingredients}">
               </div>
               <div class="form-group">
                 <label for="job-description">Counts</label>
-               <input name="count" type="text" class="form-control" id="recipe-title" placeholder="count">
+               <input name="count" type="text" class="form-control" id="recipe-title" value="${recipe.count}">
               </div>
               <div class="form-group">
                 <label for="job-description">Recipe Description</label>
-               <input name="recipe" type="text" class="form-control" id="recipe-title" placeholder="recipe">
-              </div>
-                <div class="form-group">
-                <label for="job-description">Job Description</label>
-                <div class="editor" id="editor-1">
-                  <p>Write Job Description!</p>
-                </div>
+               <input name="recipe" type="text" class="form-control" id="recipe-title" value="${recipe.recipe}">
               </div>
                <div class="row form-group">
                 <div class="col-md-12">
@@ -94,8 +77,6 @@
               </div>
             </form>
           </div>
-
-         
         </div>
         <div class="row align-items-center mb-5">
           
