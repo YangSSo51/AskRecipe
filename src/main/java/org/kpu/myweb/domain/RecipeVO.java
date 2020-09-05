@@ -6,6 +6,7 @@ public class RecipeVO {
 	private String url;
 	private String filename;
 	private int count;
+	private int view_cnt;
 	private String ingredients;
 	private String recipe;
 	public String getId() {
@@ -53,5 +54,11 @@ public class RecipeVO {
 	}
 	public void setCount(int count) {
 		this.count = count;
+	}
+	public int getView_cnt() {
+		return view_cnt;
+	}
+	public void setView_cnt(int view_cnt) {
+		this.view_cnt = view_cnt;
 	}
 }

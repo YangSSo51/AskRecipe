@@ -42,5 +42,9 @@
 		delete from tk_recipe where title = #{title}
     </delete>
 
-	
+	<update id="updateViewCnt">
+		update tk_recipe
+		set view_cnt = view_cnt+1
+		where title=#{title}
+	</update>
 </mapper>  

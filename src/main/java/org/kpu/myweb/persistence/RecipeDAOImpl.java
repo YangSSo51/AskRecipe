@@ -47,5 +47,9 @@ public class RecipeDAOImpl implements RecipeDAO {
 		recipelist = sqlSession.selectList(namespace+".search", vo);
 		return recipelist;
 	}
+	
+	public void updateViewCnt(String title) throws Exception{
+		sqlSession.update(namespace+".updateViewCnt",title);
+	}
 
 }

@@ -8,11 +8,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h1 class="text-white font-weight-bold">Post A Job</h1>
+            <h1 class="text-white font-weight-bold">Update Recipe</h1>
             <div class="custom-breadcrumbs">
               <a href="#">Home</a> <span class="mx-2 slash">/</span>
               <a href="#">Job</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong>Post a Job</strong></span>
+              <span class="text-white"><strong>Update Recipe</strong></span>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
           <div class="col-lg-8 mb-4 mb-lg-0">
             <div class="d-flex align-items-center">
               <div>
-                <h2>Post A Job</h2>
+                <h2>Update Recipe</h2>
               </div>
             </div>
           </div>
@@ -37,7 +37,7 @@
         <div class="row mb-5">
           <div class="col-lg-12">
             <form class="p-4 p-md-5 border rounded" name=form1 action="http://localhost:8080/myweb/post/update/" method="post" enctype="multipart/form-data">
-              <h3 class="text-black mb-5 border-bottom pb-2">Job Details</h3>
+              <h3 class="text-black mb-5 border-bottom pb-2">Recipe Details</h3>
               <div class="form-group">
                 <label for="company-website-tw d-block">Upload Featured Image</label> <br>
                 <label class="btn btn-primary btn-md btn-file">

@@ -7,13 +7,17 @@ import org.kpu.myweb.domain.SearchVO;
 import org.kpu.myweb.persistence.RecipeDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class RecipeServiceImpl implements RecipeService{
 	@Autowired
 	private RecipeDAO recipeDAO;
-
+	
+	@Transactional(isolation=Isolation.READ_COMMITTED)
 	public RecipeVO readRecipe(String id) throws Exception {
+		recipeDAO.updateViewCnt(id);
 		return recipeDAO.read(id);
 	}
 	

@@ -25,7 +25,7 @@
         <div class="row align-items-center mb-5">
             <div class="d-flex align-items-center">
               <div class="border p-2 d-inline-block mr-3 rounded">
-                <img src="getImage?name=${recipe.filename}" style="width:750px;height:500px;"/>
+                <img src="getImage?name=${recipe.filename}" style="width:450px;height:300px;"/>
               </div>
               <div>
               </div>
@@ -35,9 +35,11 @@
           <div class="col-lg-8">
           	<div class="mb-5">
           	<h2>${recipe.title }</h2>
+          	<!--  
           	<a href="javascript:;" id="kakao-link-btn"> 
 			<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
 			</a>
+			-->
           	</div>
           	
             <div class="mb-5">

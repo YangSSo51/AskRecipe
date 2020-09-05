@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.kpu.myweb.domain.StudentVO;
-import org.kpu.myweb.persistence.MemberDAO;
+import org.kpu.myweb.domain.RecipeVO;
+import org.kpu.myweb.domain.SearchVO;
+import org.kpu.myweb.domain.UserVO;
+import org.kpu.myweb.persistence.RecipeDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,26 +16,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
-public class MemberDAOTest {
+public class RecipeDAOTest {
 
 	@Autowired
-	private MemberDAO dao;
-	private static Logger logger = LoggerFactory.getLogger(MemberDAOTest.class);
+	private RecipeDAO dao;
+	private static Logger logger = LoggerFactory.getLogger(RecipeDAOTest.class);
 	
 	@Test
-	public void testReadByid() throws Exception {
-		StudentVO vo;
-		vo = dao.read("hansol");
-
-		logger.info(vo.toString());
-	}
-	@Test
 	public void testReadList() throws Exception {
-		List<StudentVO> voList;
+		List<RecipeVO> voList;
 		voList = dao.readList();
 
-		for(StudentVO svo : voList) {
+		for(RecipeVO svo : voList) {
 			logger.info(svo.toString());
 		}
 	}
+
 }

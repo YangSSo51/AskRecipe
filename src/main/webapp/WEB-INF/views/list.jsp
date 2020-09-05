@@ -63,7 +63,7 @@
 
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
-            <h2 class="section-title mb-2"><c:out value="${list}"/>Recipe</h2>
+            <h2 class="section-title mb-2"><c:out value="${list}"/> Recipes</h2>
           </div>
         </div>
  	
@@ -77,13 +77,14 @@
 
             <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
               <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-                <h2><c:out value="${recipeVO.title}"/></h2>
+                <h2><c:out value="${recipeVO.title}(${recipeVO.view_cnt})"/></h2>
                 <strong><c:out value="${recipeVO.id}"/></strong>
               </div>
               <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
                 <span class="icon-check-circle"></span> <c:out value="${count}/${recipeVO.count}"/>
               </div>
               <div class="job-listing-meta">
+              	<a href="https://youtu.be/UkpZvNV-dlw" class="button style3 fit" data-poptrox="youtube,800x400"></a>
                 <span class="badge badge-success" onclick="location.href='${recipeVO.url}'">Watch</span>
               </div>
             </div>

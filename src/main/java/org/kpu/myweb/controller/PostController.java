@@ -8,7 +8,6 @@ import java.util.List;
 import org.apache.commons.io.IOUtils;
 import org.kpu.myweb.domain.RecipeVO;
 import org.kpu.myweb.domain.SearchVO;
-import org.kpu.myweb.domain.StudentVO;
 import org.kpu.myweb.service.RecipeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -78,8 +77,6 @@ public class PostController {
 		List<RecipeVO> recipe = recipeService.searchRecipe(vo);
 		model.addAttribute("recipe",recipe);
 		int count=0;
-		System.out.println(vo.getSearch1());
-		System.out.println(vo.getSearch2());
 		if(vo.getSearch1()!="") count++;
 		if(vo.getSearch2()!="") count++;
 		if(vo.getSearch3()!="") count++;
@@ -103,7 +100,6 @@ public class PostController {
 		String filePath = "C:\\temp\\";
 		MultipartFile file = mtf.getFile(fileTag);
 		String fileName = file.getOriginalFilename();
-		System.out.println("파일명"+fileName);
 		if(fileName!="") {
 			vo.setFilename(fileName);
 			try{
@@ -120,8 +116,6 @@ public class PostController {
 	@RequestMapping("/getImage")
 	@ResponseBody
     public ResponseEntity<byte[]> getImage(@RequestParam("name") String filename) throws Exception {
-    	System.out.println("파일이름");
-    	System.out.println(filename);
         HttpHeaders header = new HttpHeaders();
         header.setContentType(MediaType.IMAGE_JPEG);
         return new ResponseEntity<byte[]>(IOUtils.toByteArray(new FileInputStream(new File("C:\\temp\\"+filename))), header, HttpStatus.CREATED);

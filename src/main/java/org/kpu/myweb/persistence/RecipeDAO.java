@@ -12,4 +12,5 @@ public interface RecipeDAO {
 	public void delete(String id) throws Exception;
 	public void update(RecipeVO recipe) throws Exception;
 	public List<RecipeVO> search(SearchVO vo) throws Exception; 
+	public void updateViewCnt(String title) throws Exception;
 }

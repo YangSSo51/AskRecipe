@@ -15,6 +15,10 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDAO userDAO;
 
+	public UserServiceImpl(UserDAO userDAO) {
+		this.userDAO = userDAO;
+	}
+	
 	public UserVO readUser(String id) throws Exception {
 		return userDAO.read(id);
 	}
